@@ -2,31 +2,42 @@
 
 function returnFirst(arr) {
   // return the first item from the array
+  return arr[0];
 }
 
 function returnLast(arr) {
   // return the last item of the array
+  return arr[arr.length - 1];
 }
 
 function getArrayLength(arr) {
   // return the length of the array
+  return arr.length;
 }
 
 function incrementByOne(arr) {
   // arr is an array of integers  
   // increase each integer by one
   // return the array
+  for (let i = 0; i < arr.length; i++) {
+  arr[i] = i++;
+}
+return arr;
 }
 
 function addItemToArray(arr, item) {
   // add the item to the end of the array
   // return the array
+  arr.push(item);
+  return arr;
 }
 
 function addItemToFront(arr, item) {
   // add the item to the front of the array
   // return the array
   // hint: use the array method .unshift
+  arr.unshift(item);
+  return arr;
 }
 
 function wordsToSentence(words) {
@@ -34,6 +45,8 @@ function wordsToSentence(words) {
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
   // example: ['Hello', 'world!'] -> 'Hello world!'
+  //for (let i = 0; i < words.length; i++) {
+    return words.join(' ');
 }
 
 function contains(arr, item) {
@@ -54,12 +67,26 @@ function averageTestScore(testScores) {
 function largestNumber(numbers) {
   // numbers is an array of integers
   // return the largest integer
+  return Math.max(numbers());
 }
 
 function multiplyArguments() {
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
+  if (arguments.length === 0){
+    return 0;
+  }
+  else if (arguments.length === 1) {
+    return arguments;
+  }
+  let product = 0;
+
+  for (let i = 0; i < arguments.length; i++) {
+      product = product * arguments[i];
+  }
+
+  return product;
 }
 
 // Do not modify code below this line.
